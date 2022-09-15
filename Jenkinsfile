@@ -3,7 +3,7 @@ node{
     git 'https://github.com/PriyaBhardwaj/cucumberbasic'
   }
   stage('Compile Package'){
-    def = tool name: 'MAVEN', type: 'maven'
+    def mvnHome= tool name: 'MAVEN', type: 'maven'
     sh ="${mvnHome}/bin/mvn package"
   }
 }
